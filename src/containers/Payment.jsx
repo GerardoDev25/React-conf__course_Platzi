@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
+import '../styles/components/Payment.css';
+
 
 export const Payment = () => {
   return (
-    <div>Payment</div>
-  )
-}
+    <div className="Payment">
+      <div className="Payment-content">
+        <h3>Resument del pedido:</h3>
+        <div className="Payment-button">Boton de pago con Paypal</div>
+      </div>
+      <div />
+    </div>
+  );
+};
