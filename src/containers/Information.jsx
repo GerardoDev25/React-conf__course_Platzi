@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext';
 
 import '../styles/components/Information.css';
 
-export const Information = () => {
+export const Information = ({ history }) => {
   const { state, addToBuyer } = useContext(AppContext);
   const form = useRef(null);
   const { cart } = state;
@@ -23,6 +23,7 @@ export const Information = () => {
       phone: formData.get('phone'),
     };
     addToBuyer(buyer);
+    history.push('/checkout/payment');
   };
 
   return (
